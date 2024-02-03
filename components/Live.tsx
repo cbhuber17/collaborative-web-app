@@ -34,13 +34,6 @@ type Props = {
 
 const Live = ({ canvasRef, undo, redo }: Props) => {
   /**
-   * useOthers returns the list of other users in the room.
-   *
-   * useOthers: https://liveblocks.io/docs/api-reference/liveblocks-react#useOthers
-   */
-  const others = useOthers();
-
-  /**
    * useMyPresence returns the presence of the current user in the room.
    * It also returns a function to update the presence of the current user.
    *
@@ -291,7 +284,7 @@ const Live = ({ canvasRef, undo, redo }: Props) => {
         )}
 
         {/* Show the live cursors of other users */}
-        <LiveCursors others={others} />
+        <LiveCursors />
 
         {/* Show the comments */}
         <Comments />
