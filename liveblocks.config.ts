@@ -14,7 +14,7 @@ export type Presence = {
   cursor: { x: number, y: number } | null,
   cursorColor: string | null,
   editingText: string | null,
-  // message: string | null;
+  message?: string | null;
 };
 
 // Optionally, Storage represents the shared document that persists in the
